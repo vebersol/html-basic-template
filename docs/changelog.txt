@@ -1,0 +1,14 @@
+2012/09/21
+
+- code source separated from output source. Now vendor and source files are available outside the final version to make deploy easier. Reference at: https://confluence.conrad-caine.com/display/MATERIAL/Basic+structure
+- htaccess incremented to avoid problems on load webfonts and videos, cache improvement, gzip compression enabled and folders starting with "." are inaccessible by default.
+
+2012/08/30
+
+- htaccess file changed to load just in specified domains.
+
+2012/08/29
+
+- changelog file created
+- htaccess improvement: add the possibility to enable webm mime type.
+- htacces example for live version

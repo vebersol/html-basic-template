@@ -1,0 +1,30 @@
+Concatenate is a class that provide a clean way to put all javascript/css files in one file.
+
+How to use:
+
+1. Put the .htacces file in the same level of your assets folder.
+2. Create a json file in assets/data/files_manifest.json following the structure bellow:
+
+Example:
+{
+	"css": [
+		"reset.css",
+		"core.css"
+	],
+	"js": [
+		"lib/jquery.js",
+		"core/common.js"
+	]
+
+}
+
+3.  After create the file and put all files that you need to load in this json file, you just need to add the javascript and css file to the page, using the structure below:
+
+Example:
+
+<link rel="stylesheet" href="assets/css/styles.css">
+<script type="text/javascript" src="assets/js/application.js"></script>
+
+It will load each file containing all files concatenated and save the loaded version in the correct folder.
+
+4. To load the generated file just turn RewriteEngine off inside your .htacces file

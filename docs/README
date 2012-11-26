@@ -1,0 +1,14 @@
+How to use this package:
+
+This is a basic structure based on Conrad Caine's code standards, defined by Frontend team. You must use this structure if you want to improve the usage of standard definitions of this company. If you don't want to use this - you're a free person - you must follow the code standards and probably you would have to build a similar structure.
+
+Feel free to remove all unused folders and files.
+
+Before go live, please, don't forget to:
+
+* remove the vendor folder on live version (if it isn't being used).
+* minify javascript and css files
+* .htaccess - remove concatenate rules or use the example that comes on basic structure.
+* validate your HTML and CSS.
+* verify SEO checklist. (not provided yet, waiting Felix)
+* write on confluence page some basic information about how to deploy the app. Explain in a single step by step list to avoid mistakes in the future.
