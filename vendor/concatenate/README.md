@@ -4,8 +4,8 @@ Concatenate is a class that provide a clean way to put all javascript/css files 
 
 ## How to use:
 
-1. Put the .htacces file in the same level of your assets folder.
-2. Create a json file in assets/data/files_manifest.json following the structure bellow:
+1 - Put the .htacces file in the same level of your assets folder.
+2 - Create a json file in assets/data/files_manifest.json following the structure bellow:
 
 ### Example:
 
@@ -23,7 +23,7 @@ Concatenate is a class that provide a clean way to put all javascript/css files 
 }
 ```
 
-3.  After create the file and put all files that you need to load in this json file, you just need to add the javascript and css file to the page, using the structure below:
+3 -  After create the file and put all files that you need to load in this json file, you just need to add the javascript and css file to the page, using the structure below:
 
 ### Example:
 
@@ -34,16 +34,16 @@ Concatenate is a class that provide a clean way to put all javascript/css files 
 
 It will load each file containing all files concatenated and save the loaded version in the correct folder.
 
-4. To load the generated file just turn RewriteEngine off inside your .htacces file
+4 - To load the generated file just turn RewriteEngine off inside your .htacces file
 
 ```htaccess
 RewriteRule ^assets/js/(application|application-min)\.js ../vendor/concatenate/jsfiles.php [PT]
 RewriteRule ^assets/css/(styles|styles-min)\.css ../vendor/concatenate/cssfiles.php [PT]
 ```
 
-5. You can also create different versions of files manifest, following the same structure of files_manifest.json, just adding new lines on htaccess and creating new php files to construct the css and js files.
+5 - You can also create different versions of files manifest, following the same structure of files_manifest.json, just adding new lines on htaccess and creating new php files to construct the css and js files.
 
-5.1. Setup the .htaccess file:
+5.1 - Setup the .htaccess file:
 
 ### Example:
 
@@ -53,7 +53,7 @@ RewriteRule ^assets/js/(my-other-js-file|my-other-js-file-min)\.js ../vendor/con
 RewriteRule ^assets/css/(my-other-css-file|my-other-css-file-min)\.css ../vendor/concatenate/myother_cssfiles.php [PT]
 ```
 
-5.2. Setup the php files:
+5.2 - Setup the php files:
 
 ### Example:
 
@@ -87,7 +87,7 @@ new Concatenate('css', 'my-other-css-file', '../../www/assets/css/', '../../www/
 ?>
 ```
 
-5.3 Setup the files manifest:
+5.3 - Setup the files manifest:
 
 ### Example:
 
@@ -110,7 +110,7 @@ myother_cssfiles.json
 }
 ```
 
-5.4 Finally, add the files to your html page:
+5.4 - Finally, add the files to your html page:
 
 ### Example:
 
