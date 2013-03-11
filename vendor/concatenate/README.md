@@ -7,7 +7,7 @@ Concatenate is a class that provide a clean way to put all javascript/css files 
 1 - Put the .htacces file in the same level of your assets folder.
 2 - Create a json file in assets/data/files_manifest.json following the structure bellow:
 
-*Example:*
+_Example:_
 
 ```json
 {
@@ -25,7 +25,7 @@ Concatenate is a class that provide a clean way to put all javascript/css files 
 
 3 -  After create the file and put all files that you need to load in this json file, you just need to add the javascript and css file to the page, using the structure below:
 
-*Example:*
+_Example:_
 
 ```html
 <link rel="stylesheet" href="assets/css/styles.css">
@@ -45,17 +45,16 @@ RewriteRule ^assets/css/(styles|styles-min)\.css ../vendor/concatenate/cssfiles.
 
 5.1 - Setup the .htaccess file:
 
-*Example:*
+_Example:_
 
 ```htaccess
 RewriteRule ^assets/js/(my-other-js-file|my-other-js-file-min)\.js ../vendor/concatenate/myother_jsfiles.php [PT]
-
 RewriteRule ^assets/css/(my-other-css-file|my-other-css-file-min)\.css ../vendor/concatenate/myother_cssfiles.php [PT]
 ```
 
 5.2 - Setup the php files:
 
-*Example:*
+_Example:_
 
 myother_jsfiles.php
 ```php
@@ -89,7 +88,7 @@ new Concatenate('css', 'my-other-css-file', '../../www/assets/css/', '../../www/
 
 5.3 - Setup the files manifest:
 
-*Example:*
+_Example:_
 
 myother_jsfiles.json
 ```json
@@ -112,7 +111,7 @@ myother_cssfiles.json
 
 5.4 - Finally, add the files to your html page:
 
-*Example:*
+_Example:_
 
 ```html
 <link rel="stylesheet" href="assets/css/my-other-css-file.css">
