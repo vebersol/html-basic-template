@@ -21,6 +21,7 @@ Concatenate is a class that provide a clean way to put all javascript/css files 
 	]
 
 }
+```
 
 3.  After create the file and put all files that you need to load in this json file, you just need to add the javascript and css file to the page, using the structure below:
 
@@ -29,6 +30,7 @@ Concatenate is a class that provide a clean way to put all javascript/css files 
 ```html
 <link rel="stylesheet" href="assets/css/styles.css">
 <script type="text/javascript" src="assets/js/application.js"></script>
+```
 
 It will load each file containing all files concatenated and save the loaded version in the correct folder.
 
@@ -37,6 +39,7 @@ It will load each file containing all files concatenated and save the loaded ver
 ```htaccess
 RewriteRule ^assets/js/(application|application-min)\.js ../vendor/concatenate/jsfiles.php [PT]
 RewriteRule ^assets/css/(styles|styles-min)\.css ../vendor/concatenate/cssfiles.php [PT]
+```
 
 5. You can also create different versions of files manifest, following the same structure of files_manifest.json, just adding new lines on htaccess and creating new php files to construct the css and js files.
 
@@ -48,6 +51,7 @@ RewriteRule ^assets/css/(styles|styles-min)\.css ../vendor/concatenate/cssfiles.
 RewriteRule ^assets/js/(my-other-js-file|my-other-js-file-min)\.js ../vendor/concatenate/myother_jsfiles.php [PT]
 
 RewriteRule ^assets/css/(my-other-css-file|my-other-css-file-min)\.css ../vendor/concatenate/myother_cssfiles.php [PT]
+```
 
 5.2. Setup the php files:
 
@@ -66,6 +70,7 @@ spl_autoload_register('autoLoader');
 
 new Concatenate('js', 'my-other-js-file', '../../www/assets/js/', '../../www/assets/js/', 'myother_jsfiles.json');
 ?>
+```
 
 myother_cssfiles.php
 ```php
@@ -80,6 +85,7 @@ spl_autoload_register('autoLoader');
 
 new Concatenate('css', 'my-other-css-file', '../../www/assets/css/', '../../www/assets/css/', 'myother_cssfiles.json');
 ?>
+```
 
 5.3 Setup the files manifest:
 
@@ -93,6 +99,7 @@ myother_jsfiles.json
 		"other.js"
 	]
 }
+```
 
 myother_cssfiles.json
 ```json
@@ -101,6 +108,7 @@ myother_cssfiles.json
 		"home.css"
 	]
 }
+```
 
 5.4 Finally, add the files to your html page:
 
@@ -109,3 +117,4 @@ myother_cssfiles.json
 ```html
 <link rel="stylesheet" href="assets/css/my-other-css-file.css">
 <script type="text/javascript" src="assets/js/my-other-js-file.js"></script>
+```
