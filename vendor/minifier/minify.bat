@@ -2,12 +2,12 @@
 echo DESCRIPTION
 echo These script will compress assets/js/application.js and assets/css/styles.css. The compressed files have the sufix -min
 echo These files are compressed using yuicompressor.
-echo. 
-echo REQUIRES: 
-echo This files requires yuicompressor-2.4.7.jar or another version of yuicompressor to work. 
+echo.
+echo REQUIRES:
+echo This files requires yuicompressor-2.4.7.jar or another version of yuicompressor to work.
 echo This files requires java
 echo.
-echo AUTHOR: 
+echo AUTHOR:
 echo	Vinicius Ebersol
 echo.
 echo DATE:
@@ -59,7 +59,25 @@ echo files successfully compressed!!!
 echo ================================
 echo.
 echo.
+echo ### ATENTION!!!
+echo.
+echo ### Cache control is a version number that will be inserted after css and javascript
+echo ### filenames in HTML documents in order to avoid cache problems on deploy.
+echo.
+echo ### Example: styles-min.css?v=1231
+echo.
+echo.
 
+set /p PROCEED= Do you want to proceed to cache controll (y, n)?
+
+if /i {%PROCEED%}=={y} (goto :yes)
+if /i {%PROCEED%}=={yes} (goto :yes)
+goto :no
+
+:yes
+
+echo.
+echo.
 echo ================================
 echo Cache controll changes started
 echo ================================
@@ -77,7 +95,18 @@ cd ..\..\www
 echo.
 echo.
 echo ================================
-echo Cache controll changes finished!!!
+echo Cache controll changes finished!
+echo ================================
+echo.
+echo.
+
+:no
+
+
+echo.
+echo.
+echo ================================
+echo Task finished!!!
 echo ================================
 echo.
 echo.
