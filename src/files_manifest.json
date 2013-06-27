@@ -1,9 +1,4 @@
 {
-	"css": [
-		"webfonts.css",
-		"core.css",
-		"animations.css"
-	],
 	"js": [
 		"lib/jquery.js",
 		"core/common.js"
