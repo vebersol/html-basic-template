@@ -1,2 +1,3 @@
 assets/css/*-min.css
 assets/js/*-min.js
+*.sass-cache
