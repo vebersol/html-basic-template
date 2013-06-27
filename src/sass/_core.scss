@@ -1,0 +1,31 @@
+@import "plugins/retina-sprites/retina-sprites";
+
+body {
+	font: $main-font;
+	color: $main-color;
+
+}
+
+#logo {
+	display: block;
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+	background-color: $bg-color;
+	color: $link-color;
+	text-align: center;
+	@include vendor-prefix(transform, rotate(45deg));
+	@include vendor-prefix(transform-origin, 0 0);
+
+	&:hover {
+		@include vendor-prefix(transform, rotate(0deg));
+	}
+}
+
+.test-icon {
+	@include use-sprite(arrow);
+}
+
+.test-icon2 {
+	@include use-sprite(bone);
+}
