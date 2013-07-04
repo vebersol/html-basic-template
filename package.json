@@ -1,0 +1,29 @@
+{
+  "name": "html-basic-template",
+  "version": "0.0.0",
+  "description": "an html basic template",
+  "main": "index.html",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vebersol/html-basic-template.git"
+  },
+  "author": "Vinícius Ebersol",
+  "license": "BSD",
+  "gitHead": "476d94d5e0a2ced69aa387b2e36fe015cafa2ee9",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-cli": "~0.1.9",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-compass": "~0.3.0",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-livereload": "~0.1.2",
+    "grunt-contrib-connect": "~0.3.0"
+  }
+}
