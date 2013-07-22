@@ -1,2 +1,4 @@
-www/assets/css/*.css
-www/assets/js/*.js
+www/assets/css/styles.css
+www/assets/css/styles-min.css
+www/assets/js/application.css
+www/assets/js/application-min.css
